@@ -1,0 +1,163 @@
+﻿﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Palindromes</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="CSS/bootstrap.min.css" rel="stylesheet" />
+    <link href="CSS/bootstrap.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.5.1.min.js"></script>
+
+    <style>
+        .txtWide {
+            width: 100%;
+        }
+
+        body {
+            background-color: darkolivegreen;
+        }
+
+        .btnMarg {
+            margin-top: 20px;
+        }
+
+        .color {
+            color: aliceblue;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+            <a class="navbar-brand" href="/Index.html">Palindromes!</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/Index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Solve.html">Solve</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Code.html">Code</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Git</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog Post/YouTube Explanation</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--page content-->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1 class="mt-5">The Exercise</h1>
+                <p class="lead">This page will display your JS exercise</p>
+                <ul class="list-unstyled">
+                    <li>The Javascript Exercise</li>
+                    <li>Is placed on this page</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--User Input-->
+    <div class="container">
+        <div class="row">
+            <div class="col text-center h1 color">Palindrome or Not?!</div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 form">
+                <input id="palInput" placeholder="Enter A Word" class="txtWide" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col btnMarg">
+                <button id="btnPal" class="btn btn-dark txtWide">Let's See!</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center btnMarg">
+                <p id="stmt1" type="text"></p>
+                <p id="stmt2" type="text"></p>
+                <p id="palOut" type="text"></p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+		// letting the user press Enter to run the function
+		var input = document.getElementById("palInput");
+		input.addEventListener("keyup", function (event) {
+			if (event.keyCode === 13) {
+				event.preventDefault();
+				document.getElementById("btnPal").click();
+			}
+        });
+
+
+        // function to run once button is clicked 
+        $("#btnPal").on("click", function () {
+            let palWord = $("#palInput").val().toLowerCase().replace(/\s|\'|\.|\"/g, '');
+
+            let palOG = $("#palInput").val().toLowerCase();
+
+            if (palOG === palWord) {
+                $("#stmt1").text(`The word you entered is ${palWord}.`);
+            }
+            else {
+                $("#stmt1").text(`Let's clean that up a bit...your word is ${palWord}.`);
+            }
+
+            let revWord = palWord.split("").reverse().join("");
+            $("#stmt2").text(`Reversed, this spells ${revWord}.`);
+
+           
+			if (palWord === revWord) {
+				$("#palOut").text("Therefore, this is a Palindrome.");
+			}
+			else {
+				$("#palOut").text("Therefore, this is not a Palindrome.");
+			}
+        });
+
+
+
+    </script>
+
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="Scripts/bootstrap.bundle.min.js"></script>
+    <script src="Scripts/prism.js"></script>
+</body>
+
+</html>
