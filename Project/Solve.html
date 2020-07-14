@@ -1,5 +1,4 @@
-﻿﻿
-<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,13 +8,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Palindromes</title>
+    <title>Taco caT</title>
 
     <!-- Bootstrap core CSS -->
     <link href="CSS/bootstrap.min.css" rel="stylesheet" />
     <link href="CSS/bootstrap.css" rel="stylesheet" />
     <script src="Scripts/jquery-3.5.1.min.js"></script>
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/png" href="img/favicon-16x16.png" />
 
     <style>
         .txtWide {
@@ -35,10 +34,6 @@
         }
     </style>
 
-    <link rel="icon"
-          type="image/png"
-          href="Img/favicon-16x16.png">
-
 </head>
 
 <body>
@@ -46,7 +41,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
         <div class="container">
-            <a class="navbar-brand" href="/Index.html">Palindromes!</a>
+            <a class="navbar-brand" href="/Index.html">Taco caT</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -118,17 +113,17 @@
 
     <script>
 
-		// letting the user press Enter to run the function
-		var input = document.getElementById("palInput");
-		input.addEventListener("keyup", function (event) {
-			if (event.keyCode === 13) {
-				event.preventDefault();
-				document.getElementById("btnPal").click();
-			}
+        // letting the user press Enter to run the function
+        var input = document.getElementById("palInput");
+        input.addEventListener("keyup", function (event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                document.getElementById("btnPal").click();
+            }
         });
 
 
-        // function to run once button is clicked 
+        // function to run once button is clicked
         $("#btnPal").on("click", function () {
             let palWord = $("#palInput").val().toLowerCase().replace(/\s|\'|\.|\,|\"/g, '');
 
@@ -144,13 +139,13 @@
             let revWord = palWord.split("").reverse().join("");
             $("#stmt2").text(`Reversed, this spells ${revWord}.`);
 
-           
-			if (palWord === revWord) {
-				$("#palOut").text("Therefore, this is a Palindrome.");
-			}
-			else {
-				$("#palOut").text("Therefore, this is not a Palindrome.");
-			}
+
+            if (palWord === revWord) {
+                $("#palOut").text("Therefore, this is a Palindrome.");
+            }
+            else {
+                $("#palOut").text("Therefore, this is not a Palindrome.");
+            }
         });
 
 
