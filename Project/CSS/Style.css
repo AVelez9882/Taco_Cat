@@ -1,0 +1,61 @@
+﻿.bg {
+	/* The image used */
+	background-image: url(/img/cat.jpg);
+	/* Full height */
+	min-height: 100%;
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+.textBox {
+	background-color: lavender;
+	opacity: 0.75;
+	width: 300px;
+	border-radius: 15px;
+	padding: 25px;
+	margin: 20px;
+}
+
+
+.lm-animated-bg {
+	display: none;
+}
+
+.kClass {
+	background-color: lavender;
+	border: 2px solid purple;
+	font-weight: 700;
+}
+
+.soafClass {
+	background-color: lavender;
+	border: 2px solid black;
+	font-weight: 700;
+}
+
+.elWide {
+	width: 100%;
+	margin-top: 10px;
+}
+
+hr.Sep {
+	height: 10px;
+	background-color: black;
+}
+
+.sumColor {
+	color: lavender;
+	opacity: 0.75;
+	font-family: 'Bookman Old Style';
+	font-weight: 600;
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+.btnMarg {
+	margin-top: 10px;
+	width: 50%;
+	background-color: mediumslateblue
+}

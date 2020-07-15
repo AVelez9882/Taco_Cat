@@ -72,12 +72,15 @@
     <Content Include="CSS\bootstrap.min.css" />
     <Content Include="CSS\prism.css" />
     <Content Include="favicon.ico" />
+    <Content Include="img\cat.jpg" />
     <Content Include="Index.html" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\jquery-3.5.1.min.js" />
     <Content Include="Scripts\prism.js" />
     <Content Include="Solve.html" />
+    <Content Include="CSS\Style.css" />
+    <Content Include="Scripts\Solve.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -92,9 +95,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="img\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
